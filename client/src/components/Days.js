@@ -15,11 +15,21 @@ const DayBox = styled.div`
     index + 1 < item || (index > 20 && 10 > item) ? "0.7" : "1"};
   cursor: pointer;
 `;
+const Todos = styled.div`
+  width: 90%;
+  background: #555;
+  border-radius: 5px;
+  padding: 2px;
+  box-sizing: border-box;
+  margin: 0 auto;
+  margin-bottom: 8px;
+`;
 
 function Days({ item, index, monthLength }) {
   return (
     <DayBox item={item} index={index} monthLength={monthLength}>
       {item}
+      <Todos>dd</Todos>
     </DayBox>
   );
 }
